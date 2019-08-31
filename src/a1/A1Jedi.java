@@ -23,8 +23,9 @@ public class A1Jedi {
 		for (int i=0; i<numberOfCustomers; i++) {
 			scan.next();
 			scan.next();
-			productsAmount[i][2] = 0;
-
+			for (int h=0; h<productsAmount.length; h++) {
+				productsAmount[h][2] = 0;
+			}
 			int numberOfItems = scan.nextInt();
 			int numberOfPurchesed;
 
