@@ -60,7 +60,7 @@ public class A1Adept {
 			}
 		}
 		
-		return "Biggest: " + names[biggest][0] + " " + names[biggest][1] + " (" + totals[biggest] + ")";
+		return "Biggest: " + names[biggest][0] + " " + names[biggest][1] + " (" + String.format("%.2f", totals[biggest]) + ")";
 		}
 	
 	static String smallest(String[][] names, double[] totals) {
@@ -72,7 +72,7 @@ public class A1Adept {
 			}
 		}
 		
-		return "Smallest: " + names[smallest][0] + " " + names[smallest][1] + " (" + totals[smallest] + ")";
+		return "Smallest: " + names[smallest][0] + " " + names[smallest][1] + " (" + String.format("%.2f", totals[smallest]) + ")";
 		}
 	
 	
