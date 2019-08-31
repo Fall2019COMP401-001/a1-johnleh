@@ -11,7 +11,7 @@ public class A1Jedi {
 		int numberOfProducts = scan.nextInt();
 		
 		String[] productsName = new String [numberOfProducts];
-		int [][] productsAmount = new int [numberOfProducts][2];
+		int [][] productsAmount = new int [numberOfProducts][3];
 		
 		for (int i=0; i<numberOfProducts; i++) {
 			productsName[i] = scan.next();
@@ -23,6 +23,7 @@ public class A1Jedi {
 		for (int i=0; i<numberOfCustomers; i++) {
 			scan.next();
 			scan.next();
+			productsAmount[i][2] = 0;
 
 			int numberOfItems = scan.nextInt();
 			int numberOfPurchesed;
@@ -33,8 +34,13 @@ public class A1Jedi {
 					for (int k=0;k<productsName.length; k++) {
 						if (productsName[k].equals(nameOfItem)) {
 							productsAmount[k][0] += numberOfPurchesed;
-							productsAmount[k][1] += 1;
+							if (productsAmount[k][2] == 0) {
+								productsAmount[k][2] = 1;
+								productsAmount[k][1] += 1;
 
+							}
+							
+							
 						}
 					
 					}	
